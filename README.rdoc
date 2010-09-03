@@ -1,6 +1,6 @@
 = Universal Flash Messages for Rails3
 
-This gem provides a convinient and consistant way to add flash messages inside your controllers and views.
+This gem provides a convenient and consistent way to add flash messages inside your controllers and views.
 
 AND
 
@@ -84,8 +84,8 @@ Now you can use (only!) notice, info, alert and error.
 
 ==== Remark
 
-Only those types you specified are recogniced by this gem.
-If you have removed (by not adding it to the array) :success you will be no longer able to use add_success and if you use it, it will result in an method not found error.
+Only those types you specified are recognized by this gem.
+If you have removed (by not adding it to the array) :success you will be no longer able to use add_success and if you use it, it will result in a method not found error.
 
 == Testing & Development
 
