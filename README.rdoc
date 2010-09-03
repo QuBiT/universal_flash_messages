@@ -1,0 +1,116 @@
+= Universal Flash Messages for Rails3
+
+This gem provides a convinient and consistant way to add flash messages inside your controllers and views.
+
+AND
+
+You can customize everything YOU want.
+
+== Hosted on RubyGems.org
+
+This gem is hosted on RubyGems.org: http://rubygems.org/gems/universal_flash_helper
+
+== Usage
+
+The default types are:
+
+  [:info, :success, :warning, :error]
+
+To customize this set of types read the Customization section below.
+
+=== Inside your Controller
+
+Just use the methods "recognized" by this gem.
+To see a full list of currently supported methods, run the rake task
+
+  rake universal_flash_messages:current_methods
+
+Example:
+
+ add_info "Hello World"
+ add_error_now "Sorry"
+ ...
+
+=== Inside your View
+
+To render the messages (stored as an array inside the flash variable of Rails) use the following code inside your layout file:
+
+  <%= render_flash_messages %>
+
+and add also the css file to the head of your layout file:
+
+  <%= stylesheet_link_tag 'universal_flash_messages' %>
+
+The helper method will return a div with each message enclosed by a p tag.
+Remark: this gem allows you to specify multiple messages of the same type, hence you can have more then one error message.
+
+== Install
+
+Inside your Gemfile:
+
+  gem "universal_flash_messages"
+
+and then run:
+
+  bundle install
+
+== Generators
+
+=== Install
+
+To setup everything else use the install generator
+
+  rails g universal_flash_messages:install
+
+This will also create a stylesheet and images (needed by the stylesheet) which you can then customize.
+
+This will be also necessary if you use a webserver ( e.g. passenger+nginx ) in front of rails which does the static file handling for you.
+
+== Customization
+
+=== Add/Remove/Change Types
+
+You can specify which types you want to use inside your application.
+
+To do this open the file "universal_flash_messages.rb" inside your initializers directory and change it e.g. to:
+
+  UniversalFlashMessages::FlashTypes.valid = [:notice, :info, :alert, :error]
+
+Now you can use (only!) notice, info, alert and error.
+
+  add_notice "This is a notice"
+  add_alert_now "ALERT!"
+  ...
+
+==== Remark
+
+Only those types you specified are recogniced by this gem.
+If you have removed (by not adding it to the array) :success you will be no longer able to use add_success and if you use it, it will result in an method not found error.
+
+== Testing & Development
+
+Testing should always start before the actual development.
+
+You can test this gem very easily. Just run:
+
+  rake test:basic
+
+from the console of the cloned github repository of the universal flash helper.
+
+This rake task will create a rails app inside the test directory called rails_root and will install the universal flash helper just in time.
+
+The generator which generates the rails app in your test directory will skip over every existing file, hence if you want to customize a file, then just add/create it.
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Roland Guem. See LICENSE for details.
