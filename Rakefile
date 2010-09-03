@@ -6,9 +6,13 @@ begin
     gem.name = "universal_flash_messages"
     gem.summary = "A gem that provides universal view and controller helpers for Rails 3"
     gem.description = "Allows to use individual flash types inside the controller and the view."
+    gem.email = "roland.guem@gmail.com"
+    gem.homepage = "http://github.com/QuBiT/universal_flash_messages"
+    gem.authors = ["Roland Guem"]
     gem.files = Dir["{lib}/**/*", "{config}/**/*"]
     gem.test_files = Dir["{test}/**/*"]
     gem.add_development_dependency "shoulda", ">= 2.11.3"
+    gem.extra_rdoc_files = ["LICENSE","README.rdoc"]
     gem.email = "roland.guem@gmail.com"
     gem.homepage = "http://github.com/QuBiT/universal_flash_helper"
     gem.authors = ["Roland Guem"]
@@ -21,6 +25,7 @@ _()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_
 _()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_
     }
   end
+  Jeweler::GemcutterTasks.new
 rescue
   puts "Jeweler or one of its dependencies is not installed."
 end
