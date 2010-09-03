@@ -14,7 +14,6 @@ begin
     gem.add_development_dependency "shoulda", ">= 2.11.3"
     gem.extra_rdoc_files = ["LICENSE","README.rdoc"]
     gem.email = "roland.guem@gmail.com"
-    gem.homepage = "http://github.com/QuBiT/universal_flash_helper"
     gem.authors = ["Roland Guem"]
     gem.post_install_message = %q{
 _()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_()_
