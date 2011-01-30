@@ -5,7 +5,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "universal_flash_messages"
     gem.summary = "A gem that provides universal view and controller helpers for Rails 3"
-    gem.description = "Allows to use individual flash types inside the controller and the view."
+    gem.description = "Easy, Flexible and Customizable Framework for the Rails Flash Messages. Allows to use individual flash types inside the controller and the view."
     gem.email = "roland.guem@gmail.com"
     gem.homepage = "http://github.com/QuBiT/universal_flash_messages"
     gem.authors = ["Roland Guem"]

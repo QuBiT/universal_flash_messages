@@ -1,3 +1,14 @@
+== 0.1.2 (2010-09-04)
+
+=== Optimization
+
+* Improved Gem Description
+* Improved default_method_hash and now_method_hash function
+
+== 0.1.1 (2010-09-03)
+
+* Add Gemcutter Infos (RubyGems.org)
+
 == 0.1.0 (2010-09-03)
 
 *FIRST RELEASE*

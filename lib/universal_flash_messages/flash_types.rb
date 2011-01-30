@@ -11,7 +11,7 @@ module UniversalFlashMessages
     #    default_methods_hash   #=> {"add_a" => :a, "add_b" => :b}
     #
     def self.default_methods_hash
-      valid.inject({}) {|sum, type| sum.merge({"add_#{type}" => type})}
+      self.valid.inject({}) {|hash, type| hash["add_#{type}"]=type; hash}
     end
 
     #     now_methods_hash   -> {name => type}
@@ -22,7 +22,7 @@ module UniversalFlashMessages
     #    now_methods_hash   #=> {"add_a_now" => :a, "add_b_now" => :b}
     #
     def self.now_methods_hash
-      self.valid.inject({}) {|sum, type| sum.merge({"add_#{type}_now" => type})}
+      self.valid.inject({}) {|hash, type| hash["add_#{type}_now"]=type; hash}
     end
 
   end
