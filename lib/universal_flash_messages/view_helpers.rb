@@ -11,6 +11,7 @@ module UniversalFlashMessages::ViewHelpers
 
   def render_flash_message( css_class, message_array = [] )
     return "" if message_array.blank?
+    message_array = [message_array] unless message_array.is_a?(Array)
     content = ""
     message_array.each { |message| content << content_tag( :p, message, :class => "#{css_class}" )}
     return content
